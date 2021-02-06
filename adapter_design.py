@@ -22,6 +22,7 @@ class DeviceAdapter:
         self.obj = obj
         self.__dict__.update(adapter_methods)
 
+    # if the attribute does not exist in the adapted class (a.k.a not adapted methods)
     def __getattr__(self, attr):
         return getattr(self.obj, attr)
 
